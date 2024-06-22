@@ -1,0 +1,324 @@
+body {
+    margin: 0;
+    font-family: Calluna, sans-serif;
+    font-size: 16px;
+}
+
+p {
+    font-size: 25px;
+}
+
+header {
+    position: relative;
+    width: 100%;
+    height: 500px;
+    overflow: hidden;
+    background-color: white;
+}
+
+.triangle {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 0;
+    height: 0;
+    border-top: 500px solid rgba(129, 121, 250, 0.6);
+    border-left: 100vw solid transparent;
+    z-index: 2;
+    background: linear-gradient(to top right, rgba(129, 121, 250, 0.6), rgba(250, 190, 259, 0.6));
+}
+
+.hero-girl {
+    position: absolute;
+    top: 45px;
+    left: 0;
+    width: 20%;
+    height: auto;
+    max-height: 100%;
+    z-index: 0;
+}
+
+.hero-text {
+    position: absolute;
+    top: 40%;
+    right: 35%;
+    text-align: right;
+    z-index: 2;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.hero-text h1 {
+    margin: 0;
+    font-size: 40px;
+}
+
+.hero-text .discount {
+    color: rgb(156, 109, 246);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.hero-text h1:nth-child(1) {
+    color: black;
+}
+
+.hero-text h1:nth-child(2) {
+    color: white;
+}
+
+.hero-text h1:nth-child(3) .discount {
+    color: yellow;
+}
+
+.details {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    background: linear-gradient(to right, rgb(159, 141, 253), rgb(213, 170, 249));
+    cursor: pointer;
+    position: relative;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.details::after {
+    content: '→';
+    position: absolute;
+    right: 10px;
+    color: #fff;
+}
+
+.details:hover {
+    background: linear-gradient(to right, rgb(213, 170, 249), rgb(159, 141, 253));
+}
+
+.header-right {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 2;
+    display: flex;
+    gap: 10px;
+}
+
+header input[type="text"] {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 20px;
+}
+
+header .collection {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 20px;
+    background-color: #f8f8f8;
+    cursor: pointer;
+}
+
+.trendy-arrivals,
+.showcase,
+.small-shoes {
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    margin: 20px auto;
+    width: 80%;
+}
+
+.showcase h2 {
+    font-size: 55px;
+}
+
+.trendy-arrivals h2 {
+    font-size: 55px;
+}
+
+.product-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    width: 85%;
+    margin: 0 auto;
+}
+
+.product-item {
+    position: relative;
+    padding: 10px;
+    text-align: center;
+    width: calc(33.333% - 40px);
+    transition: box-shadow 0.3s;
+    background: #fff;
+    border-radius: 10px;
+}
+
+.product-item img {
+    max-width: 100%;
+    height: auto;
+}
+
+.product-item .product-info {
+    margin-top: 10px;
+}
+
+.product-item .price {
+    background: linear-gradient(to right, rgb(140, 133, 249), rgb(160, 101, 245));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.product-item .add-to-cart {
+    display: none;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background: linear-gradient(to right, rgb(140, 133, 249), rgb(160, 101, 245));
+    color: #fff;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.product-item:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.product-item:hover .add-to-cart {
+    display: block;
+}
+
+.small-shoes {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    align-items: flex-start;
+    padding-top: 20px;
+}
+
+.small-shoes p {
+    padding-top: 6%;
+    width: 64%;
+    margin-left: 13%;
+    margin-right: 10%;
+    text-align: left;
+    font-size: 25px;
+    line-height: 1.5;
+    color: #333;
+}
+
+.small-shoes img {
+    padding-right: 23%;
+}
+
+.newsletter {
+    padding: 30px;
+    text-align: center;
+    background: linear-gradient(to right, rgb(140, 133, 249), rgb(160, 101, 245));
+    border-radius: 20px;
+    margin: 20px auto;
+    width: 100%;
+    font-size: 35px;
+}
+
+.newsletter h2 {
+    margin-top: 0;
+    font-size: 40px;
+    color: white;
+}
+
+.newsletter input[type="email"] {
+    padding: 15px;
+    width: 400px;
+    margin-right: 10px;
+    border-radius: 10px;
+    border: none;
+}
+
+.newsletter button {
+    padding: 20px 30px;
+    border-radius: 10px;
+    border: none;
+    background-color: #333;
+    color: #fff;
+    cursor: pointer;
+}
+
+footer {
+    padding: 20px;
+    background-color: #fff;
+    color: #333;
+    text-align: center;
+    font-size: 25px;
+}
+
+footer h3 {
+    font-size: 40px;
+}
+
+footer nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+footer nav ul li a {
+    color: #333;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+footer nav ul li a:hover {
+    color: rgb(156, 109, 246);
+}
+
+footer .social-media {
+    margin-top: 10px;
+}
+
+footer .social-media a {
+    color: #333;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+.category-nav {
+    background: #f8f8f8;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 20px auto;
+    width: 80%;
+    font-size: 25px;
+}
+
+#category-tabs {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    padding: 0;
+    margin: 0;
+}
+
+#category-tabs li {
+    list-style: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+    transition: color 0.3s ease, box-shadow 0.3s ease;
+}
+
+#category-tabs li a {
+    text-decoration: none;
+    color: black;
+    transition: color 0.3s ease;
+    font-size: 25px;
+}
+
+#category-tabs li:hover a {
+    color: rgb(156, 109, 246);
+    font-size: 25px;
+}
